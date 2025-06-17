@@ -1,0 +1,2625 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com https://formsubmit.co; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة فرص العمل الذهبية - أفضل الوظائف في المملكة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#059669',
+                        accent: '#DC2626',
+                        gold: '#F59E0B',
+                        pink: '#EC4899',
+                        purple: '#8B5CF6',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-in': 'bounceIn 1s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'wobble': 'wobble 1s ease-in-out infinite',
+                        'shake': 'shake 0.5s ease-in-out',
+                        'slide-in-right': 'slideInRight 0.5s ease-out',
+                        'zoom-in': 'zoomIn 0.3s ease-out',
+                        'rotate': 'rotate 2s linear infinite',
+                        'flip': 'flip 0.6s ease-in-out',
+                        'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+                    },
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <style>
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            pointer-events: none;
+        }
+        
+        input, textarea, select {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        /* Enhanced Container styles */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        /* Full width hero section */
+        .hero-full-width {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+        }
+
+        /* Responsive hero adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(30, 64, 175, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(30, 64, 175, 0.6); }
+        }
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            75% { transform: rotate(-3deg); }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes flip {
+            0% { transform: perspective(400px) rotateY(0); }
+            40% { transform: perspective(400px) translateZ(150px) rotateY(170deg); }
+            50% { transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1); }
+            80% { transform: perspective(400px) rotateY(360deg) scale(0.95); }
+            100% { transform: perspective(400px) scale(1); }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #1E40AF, #059669, #DC2626, #F59E0B);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        
+        .job-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .job-card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .job-card-actions {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9), rgba(5, 150, 105, 0.8)), 
+                        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"%3E%3Cdefs%3E%3ClinearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"%3E%3Cstop offset="0%" style="stop-color:%23667eea;stop-opacity:0.8"/%3E%3Cstop offset="100%" style="stop-color:%23764ba2;stop-opacity:0.6"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="100%" height="100%" fill="url(%23bg)"/%3E%3Cpath d="M0,320L48,341.3C96,363,192,405,288,405.3C384,405,480,363,576,362.7C672,363,768,405,864,426.7C960,448,1056,448,1152,437.3C1248,427,1344,405,1392,394.7L1440,384L1440,800L1392,800C1344,800,1248,800,1152,800C1056,800,960,800,864,800C768,800,672,800,576,800C480,800,384,800,288,800C192,800,96,800,48,800L0,800Z" fill="rgba(255,255,255,0.1)"/%3E%3C/svg%3E');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: heartbeat 3s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        .whatsapp-float i {
+            margin-top: 18px;
+        }
+
+        .search-results {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 300px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .counter {
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .job-detail-modal {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .form-success {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-error {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .job-requirements {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-right: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 0.75rem 0.75rem 0;
+        }
+
+        .job-benefits {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-right: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 0.75rem 0.75rem 0;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1E40AF, #059669, #F59E0B);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 1001;
+            transition: transform 0.1s ease;
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .section-padding {
+            scroll-margin-top: 80px;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .category-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .btn-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .job-badge {
+            animation: pulse 2s infinite;
+        }
+
+        .success-animation {
+            animation: successPulse 1s ease-in-out;
+        }
+
+        @keyframes successPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            transform: scale(1.05);
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-elements .element {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: floatUp 8s infinite linear;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .text-spacing {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Job card responsive improvements */
+        @media (max-width: 768px) {
+            .job-card {
+                min-height: 420px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 smooth-scroll">
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Dark Mode Detection -->
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+966590417009?text=مرحباً، أريد الاستفسار عن الوظائف المتاحة في منصة فرص العمل الذهبية" target="_blank" class="whatsapp-float" title="تواصل معنا عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="text-3xl animate-bounce">🌟</div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text">منصة فرص العمل الذهبية</h1>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">أفضل الفرص الوظيفية في المملكة</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="#jobs" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">وظائف الرجال</a>
+                    <a href="#women-jobs" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">وظائف النساء</a>
+                    <a href="#categories" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">التصنيفات</a>
+                    <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">خدماتنا</a>
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">من نحن</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">اتصل بنا</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button onclick="showApplicationModal()" class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium btn-hover-effect">
+                        <i class="fas fa-user-plus mr-2"></i>قدم الآن
+                    </button>
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium btn-hover-effect">
+                        <i class="fas fa-sign-in-alt mr-2"></i>تسجيل الدخول
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg z-50">
+            <div class="p-6">
+                <button onclick="toggleMobileMenu()" class="float-left text-gray-500 hover:text-gray-700 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <div class="clear-both mt-8 space-y-4">
+                    <a href="#home" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">الرئيسية</a>
+                    <a href="#jobs" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">وظائف الرجال</a>
+                    <a href="#women-jobs" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">وظائف النساء</a>
+                    <a href="#categories" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">التصنيفات</a>
+                    <a href="#services" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">خدماتنا</a>
+                    <a href="#about" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">من نحن</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-primary transition-colors py-2">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Fixed to display full width -->
+    <section id="home" class="hero-bg hero-full-width text-white relative overflow-hidden min-h-screen flex items-center">
+        <!-- Animated Background Elements -->
+        <div class="floating-elements">
+            <div class="element" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="element" style="left: 20%; animation-delay: 1s;"></div>
+            <div class="element" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="element" style="left: 40%; animation-delay: 3s;"></div>
+            <div class="element" style="left: 50%; animation-delay: 4s;"></div>
+            <div class="element" style="left: 60%; animation-delay: 5s;"></div>
+            <div class="element" style="left: 70%; animation-delay: 6s;"></div>
+            <div class="element" style="left: 80%; animation-delay: 7s;"></div>
+            <div class="element" style="left: 90%; animation-delay: 8s;"></div>
+        </div>
+
+        <!-- Floating Shapes -->
+        <div class="floating-shape top-20 left-10 text-6xl" style="animation-delay: 0s;">💼</div>
+        <div class="floating-shape top-40 right-20 text-4xl" style="animation-delay: 1s;">🎯</div>
+        <div class="floating-shape bottom-20 left-20 text-5xl" style="animation-delay: 2s;">⭐</div>
+        <div class="floating-shape bottom-40 right-10 text-3xl" style="animation-delay: 3s;">💰</div>
+        <div class="floating-shape top-60 left-1/2 text-4xl" style="animation-delay: 4s;">🚀</div>
+        <div class="floating-shape bottom-60 right-1/3 text-5xl" style="animation-delay: 5s;">💎</div>
+        
+        <div class="w-full px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
+            <div class="max-w-7xl mx-auto hero-content">
+                <h2 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 animate-fade-in text-spacing leading-tight">
+                    🌟 ابحث عن وظيفة أحلامك 🌟
+                </h2>
+                <p class="hero-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-slide-up text-white/90 text-spacing max-w-4xl mx-auto">
+                    آلاف الفرص الوظيفية المتاحة في جميع أنحاء المملكة العربية السعودية للرجال والنساء
+                    <br>
+                    <span class="text-yellow-300 font-bold animate-pulse">🏆 أكثر من 6000 وظيفة متاحة الآن!</span>
+                </p>
+                
+                <!-- Enhanced Search Bar -->
+                <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 mb-8 animate-bounce-in glass-effect max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                        <div class="relative">
+                            <input type="text" id="searchInput" placeholder="🔍 البحث عن وظيفة، شركة، أو تخصص..." class="w-full px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" oninput="performSearch()">
+                            <div id="searchResults" class="absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-2 hidden z-20 search-results">
+                                <!-- Search results will appear here -->
+                            </div>
+                        </div>
+                        <select id="cityFilter" class="px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" onchange="filterJobs()">
+                            <option value="">🏙️ جميع المدن</option>
+                            <option value="riyadh">الرياض</option>
+                            <option value="jeddah">جدة</option>
+                            <option value="dammam">الدمام</option>
+                            <option value="mecca">مكة المكرمة</option>
+                            <option value="medina">المدينة المنورة</option>
+                            <option value="taif">الطائف</option>
+                            <option value="tabuk">تبوك</option>
+                            <option value="abha">أبها</option>
+                            <option value="khobar">الخبر</option>
+                            <option value="qassim">القصيم</option>
+                            <option value="hail">حائل</option>
+                            <option value="jazan">جازان</option>
+                            <option value="najran">نجران</option>
+                            <option value="baha">الباحة</option>
+                        </select>
+                        <select id="categoryFilter" class="px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" onchange="filterJobs()">
+                            <option value="">📂 جميع التخصصات</option>
+                            <option value="security">الأمن والحراسة</option>
+                            <option value="banks">البنوك والمالية</option>
+                            <option value="education">التعليم</option>
+                            <option value="health">الصحة والطب</option>
+                            <option value="technology">التقنية والبرمجة</option>
+                            <option value="receptionist">الاستقبال والإدارة</option>
+                            <option value="driving">القيادة والتوصيل</option>
+                            <option value="sales">المبيعات والتسويق</option>
+                            <option value="engineering">الهندسة</option>
+                            <option value="hospitality">الضيافة والفنادق</option>
+                            <option value="manufacturing">التصنيع والإنتاج</option>
+                            <option value="logistics">اللوجستيات والشحن</option>
+                            <option value="women">وظائف نسائية خاصة</option>
+                        </select>
+                        <button onclick="performAdvancedSearch()" class="bg-accent hover:bg-red-700 text-white py-3 px-6 rounded-lg font-bold transition-all duration-300 btn-hover-effect">
+                            <i class="fas fa-search mr-2"></i>ابحث الآن
+                        </button>
+                    </div>
+                    
+                    <!-- Quick Filters -->
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button onclick="quickFilter('urgent')" class="bg-red-500/20 hover:bg-red-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                            🚨 وظائف عاجلة
+                        </button>
+                        <button onclick="quickFilter('remote')" class="bg-blue-500/20 hover:bg-blue-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                            🏠 عمل عن بُعد
+                        </button>
+                        <button onclick="quickFilter('high-salary')" class="bg-green-500/20 hover:bg-green-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                            💰 رواتب عالية
+                        </button>
+                        <button onclick="quickFilter('women')" class="bg-pink-500/20 hover:bg-pink-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                            👩 وظائف نسائية
+                        </button>
+                        <button onclick="quickFilter('new')" class="bg-purple-500/20 hover:bg-purple-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                            ✨ وظائف جديدة
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 mb-8 max-w-4xl mx-auto">
+                    <div class="text-center animate-fade-in counter bg-white/10 rounded-xl p-4 backdrop-blur-md" style="animation-delay: 0.2s;">
+                        <div class="text-2xl md:text-4xl font-bold text-yellow-300" data-count="6200">0</div>
+                        <div class="text-white/80 text-xs md:text-sm">وظيفة متاحة</div>
+                        <div class="text-xs text-yellow-200 mt-1">+420 هذا الأسبوع</div>
+                    </div>
+                    <div class="text-center animate-fade-in counter bg-white/10 rounded-xl p-4 backdrop-blur-md" style="animation-delay: 0.4s;">
+                        <div class="text-2xl md:text-4xl font-bold text-green-300" data-count="2100">0</div>
+                        <div class="text-white/80 text-xs md:text-sm">شركة موثوقة</div>
+                        <div class="text-xs text-green-200 mt-1">شركات معتمدة</div>
+                    </div>
+                    <div class="text-center animate-fade-in counter bg-white/10 rounded-xl p-4 backdrop-blur-md" style="animation-delay: 0.6s;">
+                        <div class="text-2xl md:text-4xl font-bold text-blue-300" data-count="95000">0</div>
+                        <div class="text-white/80 text-xs md:text-sm">باحث عن عمل</div>
+                        <div class="text-xs text-blue-200 mt-1">مستخدم نشط</div>
+                    </div>
+                    <div class="text-center animate-fade-in counter bg-white/10 rounded-xl p-4 backdrop-blur-md" style="animation-delay: 0.8s;">
+                        <div class="text-2xl md:text-4xl font-bold text-purple-300" data-count="99">0</div>
+                        <div class="text-white/80 text-xs md:text-sm">% معدل النجاح</div>
+                        <div class="text-xs text-purple-200 mt-1">رضا العملاء</div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="animate-slide-up">
+                    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+                        <a href="https://wa.me/+966590417009?text=مرحباً، أريد المساعدة في البحث عن وظيفة مناسبة" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 btn-hover-effect hover-glow">
+                            <i class="fab fa-whatsapp mr-2 animate-heartbeat"></i>
+                            تواصل معنا الآن
+                        </a>
+                        <button onclick="showApplicationModal()" class="inline-flex items-center bg-gold hover:bg-yellow-600 text-gray-800 px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 btn-hover-effect hover-glow">
+                            <i class="fas fa-rocket mr-2 animate-rotate"></i>
+                            ابدأ رحلتك الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Updates Section -->
+    <section class="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-xl md:text-2xl font-bold mb-2 flex items-center justify-center">
+                    <i class="fas fa-broadcast-tower mr-2 animate-pulse"></i>📢 آخر التحديثات المباشرة
+                </h3>
+                <div id="liveUpdates" class="text-base md:text-lg font-medium animate-fade-in">
+                    <!-- Live updates will be populated here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 text-spacing">🎯 خدماتنا المميزة</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-lg text-spacing">نقدم مجموعة شاملة من الخدمات لضمان حصولك على الوظيفة المناسبة</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">🔍</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">البحث الذكي المتطور</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        محرك بحث بالذكاء الاصطناعي يساعدك في العثور على الوظائف المناسبة لمهاراتك
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ بحث بالذكاء الاصطناعي</li>
+                        <li>✅ فلترة متقدمة ودقيقة</li>
+                        <li>✅ اقتراحات ذكية وفورية</li>
+                        <li>✅ حفظ عمليات البحث المفضلة</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">📄</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">إنشاء السيرة الذاتية</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        أدوات احترافية لإنشاء سيرة ذاتية متميزة تجذب انتباه أصحاب العمل
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ قوالب احترافية متنوعة</li>
+                        <li>✅ نصائح من خبراء التوظيف</li>
+                        <li>✅ مراجعة مجانية من المختصين</li>
+                        <li>✅ تحميل بصيغ متعددة</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">🎓</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">التدريب والتطوير</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        دورات تدريبية وورش عمل لتطوير مهاراتك ومؤهلاتك المهنية
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ دورات مهارات التوظيف</li>
+                        <li>✅ تحضير احترافي للمقابلات</li>
+                        <li>✅ شهادات معتمدة دولياً</li>
+                        <li>✅ متابعة شخصية مع المدربين</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">🤝</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">الاستشارات المهنية</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        استشارات شخصية من خبراء التوظيف لتخطيط مسارك المهني
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ تحليل الشخصية المهنية</li>
+                        <li>✅ تخطيط المسار الوظيفي</li>
+                        <li>✅ استشارات مجانية أولية</li>
+                        <li>✅ خبراء متخصصون معتمدون</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">📊</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">تقارير السوق</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        معلومات محدثة عن سوق العمل والرواتب والاتجاهات الوظيفية
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ إحصائيات الرواتب المحدثة</li>
+                        <li>✅ توقعات النمو الوظيفي</li>
+                        <li>✅ مؤشرات السوق الحية</li>
+                        <li>✅ تحديثات أسبوعية</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div class="text-5xl mb-4 text-center">🔔</div>
+                    <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center text-spacing">التنبيهات الذكية</h4>
+                    <p class="text-gray-600 dark:text-gray-300 text-center mb-4 text-spacing">
+                        إشعارات فورية عند توفر وظائف تناسب اهتماماتك ومؤهلاتك
+                    </p>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>✅ تنبيهات فورية ومخصصة</li>
+                        <li>✅ فلترة حسب التفضيلات</li>
+                        <li>✅ إشعارات الواتساب والإيميل</li>
+                        <li>✅ تخصيص التوقيت والتكرار</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs Section - Men -->
+    <section id="jobs" class="section-padding bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 text-spacing">💼 الوظائف المميزة للرجال</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-lg text-spacing">أفضل الفرص الوظيفية المتاحة حالياً للرجال في جميع التخصصات</p>
+                <div class="mt-4 text-sm text-gray-500 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg inline-block">
+                    📈 يتم تحديث الوظائف كل 15 دقيقة | 🔥 أكثر من 400 وظيفة جديدة هذا الأسبوع | 🎯 معدل قبول 88%
+                </div>
+            </div>
+            
+            <div id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Jobs will be populated by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="loadMoreJobs()" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-bold text-lg btn-hover-effect">
+                    <i class="fas fa-plus-circle mr-2"></i>عرض المزيد من الوظائف
+                </button>
+                <p class="text-sm text-gray-500 mt-3">عرض <span id="displayedJobsCount">8</span> من أصل <span id="totalJobsCount">0</span> وظيفة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women Jobs Section -->
+    <section id="women-jobs" class="section-padding bg-gradient-to-br from-pink-50 to-rose-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-pink-600 dark:text-pink-400 mb-4 text-spacing">🌸 الوظائف المميزة للنساء 🌸</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-lg text-spacing">فرص عمل مناسبة للسيدات والفتيات بمزايا مميزة وبيئة عمل مريحة وآمنة</p>
+                <div class="mt-4 text-sm text-pink-600 bg-pink-50 dark:bg-pink-900/20 p-3 rounded-lg inline-block">
+                    👩‍💼 بيئة عمل آمنة ومريحة 100% | 🎯 فرص تطوير مهني متقدمة | ⏰ مرونة في أوقات العمل | 🌟 رواتب تنافسية
+                </div>
+            </div>
+            
+            <div id="womenJobsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Women jobs will be populated by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="loadMoreWomenJobs()" class="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-all duration-300 font-bold text-lg btn-hover-effect">
+                    <i class="fas fa-plus-circle mr-2"></i>عرض المزيد من الوظائف النسائية
+                </button>
+                <p class="text-sm text-pink-500 mt-3">عرض <span id="displayedWomenJobsCount">8</span> من أصل <span id="totalWomenJobsCount">0</span> وظيفة نسائية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="section-padding bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 text-spacing">📂 تصنيفات الوظائف</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-lg text-spacing">اختر التخصص المناسب لك واكتشف الفرص المتاحة في جميع القطاعات</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                <div onclick="filterByCategory('security')" class="category-card bg-white dark:bg-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">🛡️</div>
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 text-spacing">الأمن والحراسة</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">750+ وظيفة</p>
+                    <div class="mt-2 text-xs text-green-600">📈 نمو 20% هذا الشهر</div>
+                </div>
+                
+                <div onclick="filterByCategory('banks')" class="category-card bg-white dark:bg-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">🏦</div>
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 text-spacing">البنوك والمالية</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">580+ وظيفة</p>
+                    <div class="mt-2 text-xs text-green-600">📈 نمو 25% هذا الشهر</div>
+                </div>
+                
+                <div onclick="filterByCategory('health')" class="category-card bg-white dark:bg-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">🏥</div>
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 text-spacing">الصحة والطب</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">620+ وظيفة</p>
+                    <div class="mt-2 text-xs text-green-600">📈 نمو 30% هذا الشهر</div>
+                </div>
+                
+                <div onclick="filterByCategory('education')" class="category-card bg-white dark:bg-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">🎓</div>
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 text-spacing">التعليم</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">690+ وظيفة</p>
+                    <div class="mt-2 text-xs text-green-600">📈 نمو 28% هذا الشهر</div>
+                </div>
+                
+                <div onclick="filterByCategory('technology')" class="category-card bg-white dark:bg-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">💻</div>
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 text-spacing">التقنية والبرمجة</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">950+ وظيفة</p>
+                    <div class="mt-2 text-xs text-blue-600">🚀 الأسرع نمواً +45%</div>
+                </div>
+                
+                <div onclick="filterByCategory('women')" class="category-card bg-pink-100 dark:bg-pink-900 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="text-4xl mb-3 group-hover:animate-bounce">👩‍💼</div>
+                    <h4 class="font-bold text-pink-600 dark:text-pink-400 mb-2 text-spacing">وظائف نسائية خاصة</h4>
+                    <p class="text-sm text-pink-500 dark:text-pink-300">850+ وظيفة</p>
+                    <div class="mt-2 text-xs text-pink-600">💎 فرص حصرية مميزة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 text-spacing">🏢 من نحن</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg text-spacing">منصة فرص العمل الذهبية - شريكك الموثوق في رحلة البحث عن العمل</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="animate-slide-up">
+                            <h4 class="text-2xl font-bold text-primary mb-4 flex items-center text-spacing">
+                                <i class="fas fa-star mr-3"></i>قصتنا
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-spacing">
+                                منذ تأسيسنا في عام 2020، نسعى لأن نكون الجسر الذي يربط بين المواهب المميزة والفرص الذهبية في سوق العمل السعودي. 
+                                بدأنا برؤية واضحة: تسهيل عملية البحث عن العمل وجعلها أكثر فعالية وشمولية. واليوم، نفخر بخدمة أكثر من 95,000 باحث عن عمل.
+                            </p>
+                        </div>
+                        
+                        <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                            <h4 class="text-2xl font-bold text-secondary mb-4 flex items-center text-spacing">
+                                <i class="fas fa-eye mr-3"></i>رؤيتنا
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-spacing">
+                                أن نكون المنصة الرائدة والأكثر ثقة للتوظيف في المملكة العربية السعودية، ونساهم في تحقيق رؤية المملكة 2030 
+                                من خلال ربط المواهب السعودية بأفضل الفرص الوظيفية وبناء اقتصاد معرفي متطور.
+                            </p>
+                        </div>
+                        
+                        <div class="animate-slide-up" style="animation-delay: 0.4s;">
+                            <h4 class="text-2xl font-bold text-accent mb-4 flex items-center text-spacing">
+                                <i class="fas fa-target mr-3"></i>رسالتنا
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-spacing">
+                                توفير منصة تقنية متطورة وسهلة الاستخدام تربط بين الباحثين عن العمل وأصحاب العمل، مع تقديم خدمات 
+                                استشارية وتدريبية متخصصة لضمان حصول كل شخص على الوظيفة التي تناسب مهاراته وطموحاته المستقبلية.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-2xl text-white animate-slide-in-right">
+                        <h5 class="text-2xl font-bold mb-6 text-center text-spacing">📊 إنجازاتنا المميزة</h5>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">6200+</div>
+                                <div class="text-sm opacity-90">وظيفة متاحة</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">2100+</div>
+                                <div class="text-sm opacity-90">شركة شريكة</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">95000+</div>
+                                <div class="text-sm opacity-90">مستخدم نشط</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-yellow-300">99%</div>
+                                <div class="text-sm opacity-90">رضا العملاء</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-trophy text-yellow-300 ml-3"></i>
+                                <span class="text-sm">أفضل منصة توظيف في المملكة 2024</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-yellow-300 ml-3"></i>
+                                <span class="text-sm">معتمدة من وزارة الموارد البشرية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-yellow-300 ml-3"></i>
+                                <span class="text-sm">حماية كاملة للبيانات الشخصية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-yellow-300 ml-3"></i>
+                                <span class="text-sm">فريق خبراء متخصص 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-spacing">📞 تواصل معنا</h3>
+                <p class="text-xl text-spacing">نحن هنا لمساعدتك في كل خطوة من رحلة البحث عن العمل</p>
+                <div class="mt-4 text-white/80 text-spacing">
+                    🕐 متاحون 24/7 لخدمتك | 📱 استجابة فورية عبر الواتساب | 💬 دعم فني متخصص ومتقدم
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-all duration-300">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-spacing">واتساب</h4>
+                    <p class="text-white/80 mb-3 text-sm text-spacing">للتواصل السريع والاستفسارات الفورية</p>
+                    <a href="https://wa.me/+966590417009?text=مرحباً، أحتاج مساعدة في البحث عن وظيفة مناسبة" target="_blank" class="bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 inline-block text-sm font-bold btn-hover-effect">
+                        +966 59 041 7009
+                    </a>
+                    <div class="mt-2 text-xs text-white/60">متاح 24/7</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-spacing">البريد الإلكتروني</h4>
+                    <p class="text-white/80 mb-3 text-sm text-spacing">لإرسال السير الذاتية والاستفسارات التفصيلية</p>
+                    <a href="mailto:kalimmmy@gmail.com" class="bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 inline-block text-sm font-bold btn-hover-effect">
+                        kalimmmy@gmail.com
+                    </a>
+                    <div class="mt-2 text-xs text-white/60">استجابة خلال ساعة</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-headset text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-spacing">الدعم الفني</h4>
+                    <p class="text-white/80 mb-3 text-sm text-spacing">مساعدة تقنية ودعم استخدام المنصة</p>
+                    <a href="https://wa.me/+966590417009?text=أحتاج مساعدة تقنية في استخدام المنصة" target="_blank" class="bg-purple-500 text-white px-4 py-3 rounded-lg hover:bg-purple-600 transition-all duration-300 inline-block text-sm font-bold btn-hover-effect">
+                        دعم تقني فوري
+                    </a>
+                    <div class="mt-2 text-xs text-white/60">متخصصون جاهزون</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-clock text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-spacing">ساعات العمل</h4>
+                    <p class="text-white/80 mb-3 text-sm text-spacing">نحن متاحون في جميع الأوقات لخدمتك</p>
+                    <div class="text-sm space-y-1 bg-white/10 p-3 rounded-lg">
+                        <div>السبت - الخميس: 24/7</div>
+                        <div>الجمعة: متاح عبر الواتساب</div>
+                    </div>
+                    <div class="mt-2 text-xs text-white/60">خدمة مستمرة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Detail Modal -->
+    <div id="jobDetailModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl m-4 max-w-4xl w-full job-detail-modal">
+            <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                <h3 id="jobDetailTitle" class="text-2xl font-bold text-gray-800 dark:text-white">تفاصيل الوظيفة</h3>
+                <button onclick="closeJobDetailModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl transition-colors">×</button>
+            </div>
+            
+            <div id="jobDetailContent" class="p-6">
+                <!-- Job details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">📝 تقديم طلب توظيف</h3>
+                <button onclick="closeApplicationModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl transition-colors">×</button>
+            </div>
+            
+            <div id="formMessage" class="hidden mb-4"></div>
+            
+            <form id="applicationForm" action="https://formsubmit.co/kalimmmy@gmail.com" method="POST" class="space-y-6">
+                <!-- Hidden FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="طلب توظيف جديد من منصة فرص العمل الذهبية">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="about:blank">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الاسم الأول *</label>
+                        <input type="text" name="الاسم_الأول" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">اسم العائلة *</label>
+                        <input type="text" name="اسم_العائلة" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">رقم الهاتف *</label>
+                    <input type="tel" name="رقم_الهاتف" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="+966 5xxxxxxxx">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">البريد الإلكتروني *</label>
+                    <input type="email" name="البريد_الإلكتروني" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الجنس *</label>
+                        <select name="الجنس" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر الجنس</option>
+                            <option value="ذكر">ذكر</option>
+                            <option value="أنثى">أنثى</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">العمر</label>
+                        <select name="العمر" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر العمر</option>
+                            <option value="18-25">18-25 سنة</option>
+                            <option value="26-35">26-35 سنة</option>
+                            <option value="36-45">36-45 سنة</option>
+                            <option value="46-55">46-55 سنة</option>
+                            <option value="55+">أكثر من 55 سنة</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">المدينة *</label>
+                        <select name="المدينة" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر المدينة</option>
+                            <option value="الرياض">الرياض</option>
+                            <option value="جدة">جدة</option>
+                            <option value="الدمام">الدمام</option>
+                            <option value="مكة المكرمة">مكة المكرمة</option>
+                            <option value="المدينة المنورة">المدينة المنورة</option>
+                            <option value="الطائف">الطائف</option>
+                            <option value="تبوك">تبوك</option>
+                            <option value="أبها">أبها</option>
+                            <option value="الخبر">الخبر</option>
+                            <option value="القصيم">القصيم</option>
+                            <option value="حائل">حائل</option>
+                            <option value="جازان">جازان</option>
+                            <option value="أخرى">أخرى</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الحالة الاجتماعية</label>
+                        <select name="الحالة_الاجتماعية" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر الحالة</option>
+                            <option value="أعزب">أعزب</option>
+                            <option value="متزوج">متزوج</option>
+                            <option value="مطلق">مطلق</option>
+                            <option value="أرمل">أرمل</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الوظيفة المرغوبة *</label>
+                    <select id="jobPosition" name="الوظيفة_المرغوبة" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                        <option value="">اختر الوظيفة</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">سنوات الخبرة</label>
+                        <select name="سنوات_الخبرة" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">حدد سنوات الخبرة</option>
+                            <option value="بدون خبرة">بدون خبرة</option>
+                            <option value="أقل من سنة">أقل من سنة</option>
+                            <option value="1-2 سنة">1-2 سنة</option>
+                            <option value="3-5 سنوات">3-5 سنوات</option>
+                            <option value="6-10 سنوات">6-10 سنوات</option>
+                            <option value="أكثر من 10 سنوات">أكثر من 10 سنوات</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">المؤهل العلمي</label>
+                        <select name="المؤهل_العلمي" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">حدد المؤهل العلمي</option>
+                            <option value="أقل من الثانوية">أقل من الثانوية</option>
+                            <option value="الثانوية العامة">الثانوية العامة</option>
+                            <option value="دبلوم">دبلوم</option>
+                            <option value="بكالوريوس">بكالوريوس</option>
+                            <option value="ماجستير">ماجستير</option>
+                            <option value="دكتوراه">دكتوراه</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">التخصص الدراسي</label>
+                    <input type="text" name="التخصص_الدراسي" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="مثال: إدارة أعمال، هندسة، طب، إلخ">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الراتب المطلوب</label>
+                        <select name="الراتب_المطلوب" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر الراتب المطلوب</option>
+                            <option value="أقل من 3000 ريال">أقل من 3000 ريال</option>
+                            <option value="3000-5000 ريال">3000-5000 ريال</option>
+                            <option value="5000-8000 ريال">5000-8000 ريال</option>
+                            <option value="8000-12000 ريال">8000-12000 ريال</option>
+                            <option value="12000-20000 ريال">12000-20000 ريال</option>
+                            <option value="أكثر من 20000 ريال">أكثر من 20000 ريال</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">نوع التوظيف المفضل</label>
+                        <select name="نوع_التوظيف" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300">
+                            <option value="">اختر نوع التوظيف</option>
+                            <option value="دوام كامل">دوام كامل</option>
+                            <option value="دوام جزئي">دوام جزئي</option>
+                            <option value="عمل حر">عمل حر</option>
+                            <option value="عقد مؤقت">عقد مؤقت</option>
+                            <option value="تدريب">تدريب</option>
+                            <option value="عمل عن بُعد">عمل عن بُعد</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">المهارات والخبرات</label>
+                    <textarea name="المهارات_والخبرات" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" rows="3" placeholder="اذكر مهاراتك وخبراتك السابقة بالتفصيل..."></textarea>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">ملاحظات إضافية</label>
+                    <textarea name="ملاحظات_إضافية" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" rows="4" placeholder="أي معلومات أخرى تريد إضافتها..."></textarea>
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
+                    <h5 class="font-bold text-blue-700 dark:text-blue-300 mb-3 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i>📋 ماذا يحدث بعد التقديم؟
+                    </h5>
+                    <ul class="text-sm text-blue-600 dark:text-blue-300 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>ستتلقى رسالة تأكيد فورية على بريدك الإلكتروني</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>سيتم مراجعة طلبك من قبل فريق الخبراء خلال 24 ساعة</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>سنتواصل معك عبر الواتساب أو الهاتف لمناقشة التفاصيل</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>سنقوم بترشيحك للوظائف المناسبة لمؤهلاتك</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>متابعة مستمرة حتى حصولك على الوظيفة المناسبة</li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 text-lg btn-hover-effect">
+                    <i class="fas fa-paper-plane mr-2"></i>إرسال طلب التوظيف
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-md w-full text-center animate-zoom-in success-animation">
+            <div class="text-6xl mb-4 animate-bounce">✅</div>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">تم إرسال طلبك بنجاح!</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                شكراً لك على التقديم. سيتم مراجعة طلبك خلال 24 ساعة وسنتواصل معك قريباً عبر الواتساب أو الهاتف.
+            </p>
+            <div class="space-y-3">
+                <a href="https://wa.me/+966590417009?text=تم إرسال طلب التوظيف بنجاح، أتطلع لسماع المزيد من التفاصيل" target="_blank" class="block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 font-bold btn-hover-effect">
+                    <i class="fab fa-whatsapp mr-2"></i>تواصل عبر الواتساب
+                </a>
+                <button onclick="closeSuccessModal()" class="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-bold btn-hover-effect">
+                    موافق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-gray-800 dark:text-white text-lg">جاري البحث عن أفضل الوظائف المناسبة لك...</p>
+            <p class="text-gray-500 text-sm mt-2">يرجى الانتظار...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 gradient-text">🌟 منصة فرص العمل الذهبية</h4>
+                    <p class="text-gray-300 mb-4">أفضل منصة للبحث عن الوظائف في المملكة العربية السعودية للرجال والنساء مع ضمان الجودة والموثوقية</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-2xl cursor-pointer hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl cursor-pointer hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl cursor-pointer hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl cursor-pointer hover:text-primary transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold mb-4">روابط سريعة</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#home" class="hover:text-white transition-colors">الرئيسية</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">وظائف الرجال</a></li>
+                        <li><a href="#women-jobs" class="hover:text-white transition-colors">وظائف النساء</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">التصنيفات</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">خدماتنا</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">من نحن</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold mb-4">خدماتنا المميزة</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>البحث الذكي عن الوظائف</li>
+                        <li>إنشاء السيرة الذاتية الاحترافية</li>
+                        <li>استشارات مهنية مجانية</li>
+                        <li>تدريب وتطوير المهارات</li>
+                        <li>وظائف عن بُعد</li>
+                        <li>وظائف بدوام جزئي</li>
+                        <li>تقارير سوق العمل</li>
+                        <li>التنبيهات الذكية الفورية</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold mb-4">تواصل معنا</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fab fa-whatsapp mr-2 text-green-500"></i>
+                            <a href="https://wa.me/+966590417009" class="hover:text-white transition-colors">+966 59 041 7009</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            <a href="mailto:kalimmmy@gmail.com" class="hover:text-white transition-colors">kalimmmy@gmail.com</a>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-red-500"></i>الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-clock mr-2 text-yellow-500"></i>24/7 خدمة مستمرة</li>
+                        <li><i class="fas fa-users mr-2 text-purple-500"></i>أكثر من 95,000 مستخدم نشط</li>
+                        <li><i class="fas fa-briefcase mr-2 text-indigo-500"></i>6,200+ وظيفة متاحة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="text-center md:text-right text-gray-300">
+                        <p>© 2024 منصة فرص العمل الذهبية. جميع الحقوق محفوظة.</p>
+                        <p class="text-sm">تصميم وتطوير فريق منصة فرص العمل الذهبية المتخصص</p>
+                    </div>
+                    <div class="text-center md:text-left text-gray-400 text-sm">
+                        <p>معتمدة من وزارة الموارد البشرية والتنمية الاجتماعية</p>
+                        <p>🏆 أفضل منصة توظيف في المملكة لعام 2024 | ⭐ تقييم 4.9/5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Security functions
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            showNotification('غير مسموح بالنقر بالزر الأيمن لحماية المحتوى', 'error');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 65 || e.keyCode === 67 || e.keyCode === 80))) {
+                e.preventDefault();
+                showNotification('غير مسموح بهذا الإجراء لحماية حقوق الملكية', 'error');
+            }
+        });
+
+        // Enhanced Jobs Data
+        const jobsData = {
+            men: [
+                {
+                    id: 1,
+                    title: "حارس أمن - مدارس الرياض",
+                    company: "شركة الأمان للحراسة الأمنية",
+                    category: "security",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "5,800 ريال مع التأمينات",
+                    salaryRange: "5000-5800",
+                    hours: "6 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "🏫",
+                    gradient: "from-blue-500 to-purple-600",
+                    urgent: true,
+                    description: "مطلوب حراس أمن للعمل في مدارس الرياض. العمل في بيئة تعليمية آمنة ومريحة.",
+                    requirements: [
+                        "شهادة ثانوية عامة كحد أدنى",
+                        "لا يشترط خبرة سابقة",
+                        "القدرة على العمل في فترات مختلفة",
+                        "اللياقة البدنية الجيدة",
+                        "حسن المظهر والسيرة والسلوك"
+                    ],
+                    benefits: [
+                        "راتب شهري مجزي مع زيادات سنوية",
+                        "تأمينات اجتماعية وصحية",
+                        "إجازة أسبوعية مدفوعة الأجر",
+                        "بيئة عمل آمنة ومريحة",
+                        "فرص التطوير والترقي"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة حارس أمن - مدارس الرياض"
+                },
+                {
+                    id: 2,
+                    title: "حارس أمن - البنوك والمؤسسات المالية",
+                    company: "مجموعة الحراسة المتقدمة",
+                    category: "security",
+                    city: "jeddah",
+                    cityName: "جدة",
+                    salary: "6,200 ريال مع مزايا إضافية",
+                    salaryRange: "5400-6200",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "🏦",
+                    gradient: "from-green-500 to-teal-600",
+                    featured: true,
+                    description: "فرصة مميزة للعمل في حراسة البنوك والمؤسسات المالية في جدة.",
+                    requirements: [
+                        "شهادة ثانوية عامة أو ما يعادلها",
+                        "خبرة سابقة في مجال الأمن مفضلة",
+                        "دورات أمنية معتمدة",
+                        "القدرة على التعامل مع الأنظمة الأمنية",
+                        "مهارات تواصل ممتازة"
+                    ],
+                    benefits: [
+                        "راتب تنافسي مع علاوات",
+                        "تأمين صحي شامل",
+                        "مكافآت أداء ربع سنوية",
+                        "برامج تدريبية متقدمة",
+                        "فرص النمو المهني"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة حارس أمن - البنوك في جدة"
+                },
+                {
+                    id: 3,
+                    title: "سائق توصيل طلبات",
+                    company: "شركة التوصيل السريع",
+                    category: "driving",
+                    city: "dammam",
+                    cityName: "الدمام",
+                    salary: "3,500 ريال + عمولة مجزية",
+                    salaryRange: "3500-8000",
+                    hours: "8 ساعات مرنة",
+                    holiday: "جدول مرن",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "🚗",
+                    gradient: "from-orange-500 to-red-600",
+                    popular: true,
+                    description: "انضم لفريق التوصيل السريع. دخل ممتاز ومرونة في العمل.",
+                    requirements: [
+                        "رخصة قيادة سارية",
+                        "سيارة شخصية",
+                        "معرفة بالطرق",
+                        "هاتف ذكي",
+                        "القدرة على العمل لساعات مرنة"
+                    ],
+                    benefits: [
+                        "راتب أساسي + عمولة",
+                        "مرونة في أوقات العمل",
+                        "مكافآت أسبوعية",
+                        "تطبيق سهل الاستخدام",
+                        "دعم فني 24/7"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة سائق توصيل في الدمام"
+                },
+                {
+                    id: 4,
+                    title: "مطور ويب - عمل عن بُعد",
+                    company: "شركة التقنيات المتطورة",
+                    category: "technology",
+                    city: "remote",
+                    cityName: "عمل عن بُعد",
+                    salary: "8,000 - 18,000 ريال",
+                    salaryRange: "8000-18000",
+                    hours: "40 ساعة أسبوعياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "💻",
+                    gradient: "from-indigo-500 to-blue-600",
+                    remote: true,
+                    description: "فرصة ممتازة للعمل مع شركة تقنية رائدة في تطوير المواقع.",
+                    requirements: [
+                        "خبرة في React/Vue.js/Angular",
+                        "إتقان HTML, CSS, JavaScript",
+                        "معرفة بـ Node.js",
+                        "خبرة في Git",
+                        "مهارات حل المشاكل"
+                    ],
+                    benefits: [
+                        "راتب تنافسي",
+                        "عمل من المنزل",
+                        "تجهيزات عمل مجانية",
+                        "دورات تدريبية",
+                        "فريق عمل متعاون"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة مطور ويب - عمل عن بُعد"
+                },
+                {
+                    id: 5,
+                    title: "محاسب أول - شركة كبرى",
+                    company: "مجموعة المالية المتقدمة",
+                    category: "banks",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "7,500 - 14,000 ريال",
+                    salaryRange: "7500-14000",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "📊",
+                    gradient: "from-purple-500 to-pink-600",
+                    description: "مطلوب محاسب مؤهل للعمل مع شركة رائدة في القطاع المالي.",
+                    requirements: [
+                        "بكالوريوس محاسبة أو مالية",
+                        "خبرة 3-7 سنوات",
+                        "إتقان برامج المحاسبة",
+                        "شهادات مهنية مفضلة",
+                        "مهارات تحليلية قوية"
+                    ],
+                    benefits: [
+                        "راتب مجزي مع علاوات",
+                        "تأمين صحي شامل",
+                        "مكافآت ربع سنوية",
+                        "برامج تطوير مهني",
+                        "بيئة عمل محفزة"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة محاسب أول في الرياض"
+                },
+                {
+                    id: 6,
+                    title: "مدير مبيعات - المنطقة الغربية",
+                    company: "شركة التسويق الذكي",
+                    category: "sales",
+                    city: "jeddah",
+                    cityName: "جدة",
+                    salary: "6,500 ريال أساسي + عمولة",
+                    salaryRange: "6500-20000",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "🎯",
+                    gradient: "from-green-500 to-blue-600",
+                    description: "قيادة فريق المبيعات وتحقيق الأهداف في شركة سريعة النمو.",
+                    requirements: [
+                        "خبرة إدارية في المبيعات",
+                        "مهارات قيادة الفريق",
+                        "القدرة على وضع الاستراتيجيات",
+                        "مهارات تواصل ممتازة",
+                        "رخصة قيادة"
+                    ],
+                    benefits: [
+                        "راتب أساسي + عمولات",
+                        "سيارة شركة",
+                        "مكافآت إنجاز",
+                        "فرص السفر والتدريب",
+                        "نمو مهني سريع"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة مدير مبيعات في جدة"
+                },
+                {
+                    id: 7,
+                    title: "موظف خدمة عملاء - مركز اتصال",
+                    company: "مركز الاتصالات المتقدم",
+                    category: "customer-service",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "4,800 - 7,200 ريال",
+                    salaryRange: "4800-7200",
+                    hours: "8 ساعات يومياً",
+                    holiday: "يومان أسبوعياً",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "📞",
+                    gradient: "from-blue-500 to-green-600",
+                    description: "انضم لفريق خدمة العملاء في أحد أكبر مراكز الاتصال.",
+                    requirements: [
+                        "شهادة ثانوية عامة",
+                        "مهارات تواصل ممتازة",
+                        "صبر واحترافية",
+                        "إتقان الحاسوب",
+                        "استعداد للعمل في ورديات"
+                    ],
+                    benefits: [
+                        "راتب ثابت + حوافز",
+                        "تدريب مدفوع الأجر",
+                        "بيئة عمل حديثة",
+                        "فرص الترقي",
+                        "تأمين صحي"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة موظف خدمة عملاء في الرياض"
+                },
+                {
+                    id: 8,
+                    title: "فني صيانة كمبيوتر",
+                    company: "شركة الصيانة التقنية",
+                    category: "technology",
+                    city: "dammam",
+                    cityName: "الدمام",
+                    salary: "5,800 - 9,200 ريال",
+                    salaryRange: "5800-9200",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "ذكور",
+                    genderType: "male",
+                    icon: "🔧",
+                    gradient: "from-purple-500 to-indigo-600",
+                    description: "فرصة ممتازة للعمل في مجال الصيانة التقنية.",
+                    requirements: [
+                        "دبلوم تقني أو خبرة معادلة",
+                        "معرفة بصيانة الحاسوب",
+                        "القدرة على التنقل",
+                        "مهارات حل المشاكل",
+                        "استعداد للعمل الميداني"
+                    ],
+                    benefits: [
+                        "راتب مع علاوات تقنية",
+                        "سيارة شركة أو بدل نقل",
+                        "تدريب على أحدث التقنيات",
+                        "أدوات عمل مجانية",
+                        "فرص التطوير المهني"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة فني صيانة كمبيوتر في الدمام"
+                }
+            ],
+            women: [
+                {
+                    id: 101,
+                    title: "ممرضة - مستشفيات خاصة",
+                    company: "مجموعة المستشفيات الطبية",
+                    category: "health",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "7,000 - 11,000 ريال",
+                    salaryRange: "7000-11000",
+                    hours: "12 ساعة (3 ورديات أسبوعياً)",
+                    holiday: "حسب الجدول الطبي",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "👩‍⚕️",
+                    gradient: "from-pink-500 to-rose-600",
+                    urgent: true,
+                    description: "انضمي لفريق طبي متميز في أحد أفضل المستشفيات الخاصة.",
+                    requirements: [
+                        "بكالوريوس تمريض معتمد",
+                        "ترخيص ممارسة مهنة التمريض",
+                        "خبرة سنة واحدة على الأقل",
+                        "إتقان اللغة الإنجليزية الطبية",
+                        "القدرة على العمل تحت الضغط"
+                    ],
+                    benefits: [
+                        "راتب مجزي مع علاوات ليلية",
+                        "تأمين صحي شامل",
+                        "برامج تدريب طبي مستمرة",
+                        "بيئة عمل نسائية آمنة",
+                        "فرص التخصص والتطوير"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة ممرضة في مستشفيات الرياض"
+                },
+                {
+                    id: 102,
+                    title: "موظفة استقبال - عيادات نسائية",
+                    company: "مجمع العيادات النسائية المتخصص",
+                    category: "receptionist",
+                    city: "jeddah",
+                    cityName: "جدة",
+                    salary: "4,800 - 7,200 ريال",
+                    salaryRange: "4800-7200",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "🏥",
+                    gradient: "from-purple-500 to-pink-600",
+                    featured: true,
+                    description: "فرصة مميزة للعمل في بيئة طبية نسائية متخصصة.",
+                    requirements: [
+                        "شهادة ثانوية عامة كحد أدنى",
+                        "مهارات تواصل ممتازة",
+                        "إتقان الحاسوب",
+                        "مظهر أنيق ومهني",
+                        "القدرة على التعامل مع المرضى"
+                    ],
+                    benefits: [
+                        "راتب شهري مستقر",
+                        "بيئة عمل نسائية 100%",
+                        "تأمين صحي شامل",
+                        "ساعات عمل مريحة",
+                        "فرص التدريب والتطوير"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة موظفة استقبال في عيادات جدة"
+                },
+                {
+                    id: 103,
+                    title: "معلمة رياض أطفال",
+                    company: "روضة البراعم الصغيرة",
+                    category: "education",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "6,000 - 8,500 ريال",
+                    salaryRange: "6000-8500",
+                    hours: "6 ساعات يومياً",
+                    holiday: "الجمعة والسبت + إجازات المدارس",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "👩‍🏫",
+                    gradient: "from-green-500 to-teal-600",
+                    description: "شاركي في تربية وتعليم الأطفال في بيئة تعليمية محفزة.",
+                    requirements: [
+                        "بكالوريوس تربية طفولة مبكرة",
+                        "حب الأطفال والصبر",
+                        "مهارات إبداعية وتعليمية",
+                        "القدرة على تطوير الأنشطة",
+                        "إتقان الوسائل التعليمية"
+                    ],
+                    benefits: [
+                        "راتب مجزي مع زيادات سنوية",
+                        "إجازات طويلة مدفوعة",
+                        "بيئة عمل مريحة",
+                        "دورات تطوير تعليمية",
+                        "تأمين صحي واجتماعي"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة معلمة رياض أطفال في الرياض"
+                },
+                {
+                    id: 104,
+                    title: "محاسبة مالية - شركة نسائية",
+                    company: "شركة المحاسبة النسائية المتقدمة",
+                    category: "banks",
+                    city: "dammam",
+                    cityName: "الدمام",
+                    salary: "6,500 - 11,500 ريال",
+                    salaryRange: "6500-11500",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "👩‍💼",
+                    gradient: "from-blue-500 to-purple-600",
+                    description: "فرصة مميزة للعمل في مجال المحاسبة مع شركة رائدة.",
+                    requirements: [
+                        "بكالوريوس محاسبة أو مالية",
+                        "خبرة 2-6 سنوات",
+                        "إتقان Excel وبرامج المحاسبة",
+                        "مهارات تحليلية قوية",
+                        "دقة عالية في العمل"
+                    ],
+                    benefits: [
+                        "راتب تنافسي مع مكافآت",
+                        "بيئة عمل نسائية آمنة",
+                        "مرونة في أوقات العمل",
+                        "برامج تطوير مهني",
+                        "تأمين صحي شامل"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة محاسبة مالية في الدمام"
+                },
+                {
+                    id: 105,
+                    title: "مصممة جرافيك - عمل عن بُعد",
+                    company: "استوديو التصميم الإبداعي",
+                    category: "technology",
+                    city: "remote",
+                    cityName: "عمل عن بُعد",
+                    salary: "4,500 - 9,500 ريال",
+                    salaryRange: "4500-9500",
+                    hours: "مرونة كاملة",
+                    holiday: "مرونة تامة",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "🎨",
+                    gradient: "from-pink-500 to-purple-600",
+                    remote: true,
+                    description: "اعملي من المنزل مع فريق إبداعي في مشاريع تصميم متنوعة.",
+                    requirements: [
+                        "إتقان Adobe Creative Suite",
+                        "حس فني وإبداعي متميز",
+                        "خبرة في التصميم الرقمي",
+                        "القدرة على العمل عن بُعد",
+                        "الالتزام بالمواعيد"
+                    ],
+                    benefits: [
+                        "عمل من المنزل بمرونة",
+                        "أجر ممتاز حسب المشروع",
+                        "مشاريع متنوعة ومثيرة",
+                        "فريق عمل مبدع",
+                        "فرص التطوير والتعلم"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة مصممة جرافيك - عمل عن بُعد"
+                },
+                {
+                    id: 106,
+                    title: "أخصائية تجميل - صالون راقي",
+                    company: "صالون الجمال الملكي",
+                    category: "beauty",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "4,000 ريال أساسي + عمولة",
+                    salaryRange: "4000-9000",
+                    hours: "8 ساعات يومياً",
+                    holiday: "يوم واحد أسبوعياً",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "💄",
+                    gradient: "from-rose-500 to-pink-600",
+                    description: "انضمي لفريق أخصائيات التجميل في أرقى صالونات الرياض.",
+                    requirements: [
+                        "شهادة معتمدة في التجميل",
+                        "خبرة في تقنيات التجميل",
+                        "مهارات تواصل راقية",
+                        "الإبداع والذوق الفني",
+                        "القدرة على العمل في فريق"
+                    ],
+                    benefits: [
+                        "راتب أساسي + عمولة مجزية",
+                        "عميلات VIP",
+                        "منتجات تجميل مجانية",
+                        "دورات تدريبية متقدمة",
+                        "بيئة عمل أنيقة"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة أخصائية تجميل في الرياض"
+                },
+                {
+                    id: 107,
+                    title: "مدرسة لغة إنجليزية",
+                    company: "معهد اللغات الدولي",
+                    category: "education",
+                    city: "jeddah",
+                    cityName: "جدة",
+                    salary: "6,500 - 10,200 ريال",
+                    salaryRange: "6500-10200",
+                    hours: "6 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "📚",
+                    gradient: "from-indigo-500 to-blue-600",
+                    description: "شاركي خبرتك في تعليم اللغة الإنجليزية للطلاب.",
+                    requirements: [
+                        "بكالوريوس لغة إنجليزية",
+                        "إتقان ممتاز للغة الإنجليزية",
+                        "خبرة في التدريس مفضلة",
+                        "مهارات تعليمية تفاعلية",
+                        "صبر وحب التعليم"
+                    ],
+                    benefits: [
+                        "راتب مجزي مع زيادات",
+                        "بيئة تعليمية حديثة",
+                        "طلاب متحفزون",
+                        "برامج تطوير المدرسين",
+                        "إجازات مريحة"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة مدرسة لغة إنجليزية في جدة"
+                },
+                {
+                    id: 108,
+                    title: "منسقة فعاليات ومؤتمرات",
+                    company: "شركة الفعاليات الذهبية",
+                    category: "events",
+                    city: "riyadh",
+                    cityName: "الرياض",
+                    salary: "6,000 - 10,500 ريال",
+                    salaryRange: "6000-10500",
+                    hours: "8 ساعات يومياً",
+                    holiday: "الجمعة والسبت",
+                    gender: "إناث",
+                    genderType: "female",
+                    icon: "🎪",
+                    gradient: "from-yellow-500 to-orange-600",
+                    description: "نظمي وأديري الفعاليات والمؤتمرات الراقية.",
+                    requirements: [
+                        "شهادة جامعية",
+                        "خبرة في تنظيم الفعاليات",
+                        "مهارات تنظيمية ممتازة",
+                        "إبداع في التخطيط",
+                        "القدرة على العمل تحت الضغط"
+                    ],
+                    benefits: [
+                        "راتب ممتاز + مكافآت",
+                        "العمل في فعاليات راقية",
+                        "فريق عمل متعاون",
+                        "فرص السفر والتدريب",
+                        "نمو مهني سريع"
+                    ],
+                    whatsappMessage: "أرغب في التقديم على وظيفة منسقة فعاليات في الرياض"
+                }
+            ]
+        };
+
+        // Job positions for the form dropdown
+        const jobPositions = [
+            { value: "security-school", text: "حارس أمن - مدارس" },
+            { value: "security-bank", text: "حارس أمن - بنوك" },
+            { value: "security-general", text: "حارس أمن - عام" },
+            { value: "receptionist-male", text: "موظف استقبال" },
+            { value: "receptionist-female", text: "موظفة استقبال" },
+            { value: "driver", text: "سائق توصيل" },
+            { value: "developer", text: "مطور ويب" },
+            { value: "nurse", text: "ممرضة" },
+            { value: "teacher-male", text: "معلم" },
+            { value: "teacher-female", text: "معلمة" },
+            { value: "accountant-male", text: "محاسب" },
+            { value: "accountant-female", text: "محاسبة" },
+            { value: "sales-male", text: "موظف مبيعات" },
+            { value: "sales-female", text: "موظفة مبيعات" },
+            { value: "customer-service", text: "خدمة عملاء" },
+            { value: "technician", text: "فني صيانة" },
+            { value: "beautician", text: "أخصائية تجميل" },
+            { value: "designer", text: "مصممة جرافيك" },
+            { value: "events", text: "منسقة فعاليات" },
+            { value: "english-teacher", text: "مدرسة لغة إنجليزية" },
+            { value: "kindergarten", text: "معلمة رياض أطفال" },
+            { value: "pharmacist", text: "صيدلانية" },
+            { value: "engineer", text: "مهندس" },
+            { value: "marketing", text: "أخصائي تسويق" },
+            { value: "manager", text: "مدير/ة" },
+            { value: "translator", text: "مترجمة" },
+            { value: "nutritionist", text: "أخصائية تغذية" },
+            { value: "electrician", text: "فني كهرباء" },
+            { value: "other", text: "أخرى (حدد في الملاحظات)" }
+        ];
+
+        // Live updates array
+        const liveUpdates = [
+            "🆕 تم إضافة 35 وظيفة جديدة في الرياض خلال الساعة الماضية",
+            "🔥 أكثر من 280 متقدم لوظائف التقنية هذا الأسبوع",
+            "💼 5 شركات جديدة انضمت للمنصة مع 67 وظيفة مميزة",
+            "🎯 معدل قبول الطلبات وصل إلى 88% هذا الشهر",
+            "⭐ تم توظيف 127 شخص من المنصة خلال الأسبوع الماضي",
+            "🚀 نمو في الطلب على الوظائف النسائية بنسبة 65%",
+            "💡 دورة تدريبية مجانية جديدة متاحة لجميع المتقدمين",
+            "🏆 أفضل 20 شركة وظفت من المنصة هذا الشهر",
+            "📈 زيادة 45% في الوظائف عالية الراتب هذا الشهر",
+            "🌟 إطلاق خدمة المساعد الذكي للبحث عن الوظائف المتطورة"
+        ];
+
+        // Global variables
+        let currentUpdateIndex = 0;
+        let filteredJobs = [];
+        let filteredWomenJobs = [];
+        let displayedJobsCount = 8;
+        let displayedWomenJobsCount = 8;
+        let currentSearchTerm = '';
+        let currentFilters = {
+            city: '',
+            category: '',
+            search: ''
+        };
+
+        // Initialize the website
+        document.addEventListener('DOMContentLoaded', function() {
+            populateJobPositions();
+            displayJobs();
+            displayWomenJobs();
+            animateCounters();
+            updateScrollIndicator();
+            startLiveUpdates();
+            
+            // Show welcome notification
+            setTimeout(() => {
+                showNotification('🌟 مرحباً بك في منصة فرص العمل الذهبية! اكتشف آلاف الوظائف المتاحة الآن');
+            }, 2000);
+
+            // Update job counts
+            document.getElementById('totalJobsCount').textContent = jobsData.men.length;
+            document.getElementById('totalWomenJobsCount').textContent = jobsData.women.length;
+            document.getElementById('displayedJobsCount').textContent = Math.min(displayedJobsCount, jobsData.men.length);
+            document.getElementById('displayedWomenJobsCount').textContent = Math.min(displayedWomenJobsCount, jobsData.women.length);
+        });
+
+        // Start live updates
+        function startLiveUpdates() {
+            const updatesElement = document.getElementById('liveUpdates');
+            
+            function showNextUpdate() {
+                updatesElement.style.opacity = '0';
+                setTimeout(() => {
+                    updatesElement.textContent = liveUpdates[currentUpdateIndex];
+                    updatesElement.style.opacity = '1';
+                    currentUpdateIndex = (currentUpdateIndex + 1) % liveUpdates.length;
+                }, 300);
+            }
+            
+            showNextUpdate();
+            setInterval(showNextUpdate, 4000);
+        }
+
+        // Populate job positions
+        function populateJobPositions() {
+            const jobPositionSelect = document.getElementById('jobPosition');
+            jobPositions.forEach(job => {
+                const option = document.createElement('option');
+                option.value = job.value;
+                option.textContent = job.text;
+                jobPositionSelect.appendChild(option);
+            });
+        }
+
+        // Display jobs function
+        function displayJobs() {
+            const container = document.getElementById('jobsContainer');
+            let jobsToShow = jobsData.men;
+            
+            // Apply filters if any
+            if (currentFilters.city || currentFilters.category || currentFilters.search) {
+                jobsToShow = applyFilters(jobsData.men);
+            }
+            
+            const jobs = jobsToShow.slice(0, displayedJobsCount);
+            container.innerHTML = jobs.map(job => createJobCard(job)).join('');
+            
+            document.getElementById('displayedJobsCount').textContent = jobs.length;
+            document.getElementById('totalJobsCount').textContent = jobsToShow.length;
+        }
+
+        // Display women jobs function
+        function displayWomenJobs() {
+            const container = document.getElementById('womenJobsContainer');
+            let jobsToShow = jobsData.women;
+            
+            // Apply filters if any
+            if (currentFilters.city || currentFilters.category || currentFilters.search) {
+                jobsToShow = applyFilters(jobsData.women);
+            }
+            
+            const jobs = jobsToShow.slice(0, displayedWomenJobsCount);
+            container.innerHTML = jobs.map(job => createJobCard(job, true)).join('');
+            
+            document.getElementById('displayedWomenJobsCount').textContent = jobs.length;
+            document.getElementById('totalWomenJobsCount').textContent = jobsToShow.length;
+        }
+
+        // Apply filters to jobs
+        function applyFilters(jobs) {
+            return jobs.filter(job => {
+                const matchesCity = !currentFilters.city || job.city === currentFilters.city;
+                const matchesCategory = !currentFilters.category || job.category === currentFilters.category;
+                const matchesSearch = !currentFilters.search || 
+                    job.title.toLowerCase().includes(currentFilters.search.toLowerCase()) ||
+                    job.company.toLowerCase().includes(currentFilters.search.toLowerCase()) ||
+                    job.cityName.toLowerCase().includes(currentFilters.search.toLowerCase());
+                
+                return matchesCity && matchesCategory && matchesSearch;
+            });
+        }
+
+        // Create job card HTML
+        function createJobCard(job, isWomen = false) {
+            const badgeClass = job.urgent ? 'bg-red-500 job-badge' : job.featured ? 'bg-gold job-badge' : job.popular ? 'bg-orange-500 job-badge' : job.remote ? 'bg-blue-500 job-badge' : 'bg-green-500 job-badge';
+            const badgeText = job.urgent ? '🚨 عاجل' : job.featured ? '⭐ مميز' : job.popular ? '🔥 مطلوب بكثرة' : job.remote ? '🏠 عن بُعد' : '✨ جديد';
+            const cardClass = isWomen ? 'border-pink-200 hover:border-pink-400' : '';
+            
+            return `
+                <div class="job-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden ${cardClass}">
+                    <div class="relative">
+                        <div class="bg-gradient-to-r ${job.gradient} h-24 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-3xl mb-1 animate-bounce">${job.icon}</div>
+                                <div class="text-xs font-medium">${job.company}</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 ${badgeClass} text-white px-2 py-1 rounded-full text-xs font-bold">
+                            ${badgeText}
+                        </div>
+                        <div class="absolute top-2 left-2 bg-white/20 text-white px-2 py-1 rounded text-xs font-medium">
+                            📍 ${job.cityName}
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-content p-4">
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-3 cursor-pointer hover:text-primary transition-colors line-clamp-2" onclick="showJobDetails(${job.id}, ${isWomen})">${job.title}</h4>
+                        <div class="space-y-2 mb-4 flex-1">
+                            <div class="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                                <i class="fas fa-money-bill-wave text-green-500 ml-2 min-w-[1rem]"></i>
+                                <span class="line-clamp-1">${job.salary}</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                                <i class="fas fa-clock text-blue-500 ml-2 min-w-[1rem]"></i>
+                                <span class="line-clamp-1">${job.hours}</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                                <i class="fas fa-calendar text-purple-500 ml-2 min-w-[1rem]"></i>
+                                <span class="line-clamp-1">${job.holiday}</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                                <i class="fas fa-users text-pink-500 ml-2 min-w-[1rem]"></i>
+                                <span>${job.gender}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-actions">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <button onclick="applyForJob('${job.title}')" class="flex-1 bg-primary text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium text-sm btn-hover-effect">
+                                    <i class="fas fa-paper-plane ml-1"></i>
+                                    تقدم الآن
+                                </button>
+                                <a href="https://wa.me/+966590417009?text=${encodeURIComponent(job.whatsappMessage)}" target="_blank" class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg hover:bg-green-600 transition-all duration-300 font-medium text-sm btn-hover-effect text-center">
+                                    <i class="fab fa-whatsapp ml-1"></i>
+                                    واتساب
+                                </a>
+                            </div>
+                            
+                            <button onclick="showJobDetails(${job.id}, ${isWomen})" class="w-full text-center text-primary hover:text-blue-700 text-sm font-medium transition-colors bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 py-2 rounded-lg">
+                                <i class="fas fa-info-circle ml-1"></i>
+                                عرض التفاصيل الكاملة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Enhanced search functionality
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('searchResults');
+            
+            if (searchTerm.length < 2) {
+                resultsContainer.classList.add('hidden');
+                return;
+            }
+
+            currentSearchTerm = searchTerm;
+            const allJobs = [...jobsData.men, ...jobsData.women];
+            const searchResults = allJobs.filter(job => 
+                job.title.toLowerCase().includes(searchTerm) ||
+                job.company.toLowerCase().includes(searchTerm) ||
+                job.category.toLowerCase().includes(searchTerm) ||
+                job.cityName.toLowerCase().includes(searchTerm) ||
+                job.description.toLowerCase().includes(searchTerm)
+            );
+
+            if (searchResults.length > 0) {
+                resultsContainer.innerHTML = searchResults.slice(0, 8).map(job => `
+                    <div onclick="selectSearchResult('${job.title}', ${job.id}, ${job.genderType === 'female'})" class="p-4 hover:bg-gray-100 cursor-pointer border-b last:border-b-0 transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="font-medium text-gray-800">${highlightSearchTerm(job.title, searchTerm)}</div>
+                                <div class="text-sm text-gray-600 mt-1">${job.company} - ${job.cityName}</div>
+                                <div class="text-xs text-blue-600 mt-1 font-medium">${job.salary}</div>
+                            </div>
+                            <div class="text-3xl mr-3">${job.icon}</div>
+                        </div>
+                    </div>
+                `).join('');
+                resultsContainer.classList.remove('hidden');
+            } else {
+                resultsContainer.innerHTML = `
+                    <div class="p-6 text-gray-600 text-center">
+                        <i class="fas fa-search text-4xl mb-3 text-gray-400"></i>
+                        <div class="font-medium">لا توجد نتائج مطابقة لـ "${searchTerm}"</div>
+                        <div class="text-sm mt-2">جرب كلمات مفتاحية أخرى أو تصفح التصنيفات</div>
+                    </div>
+                `;
+                resultsContainer.classList.remove('hidden');
+            }
+        }
+
+        // Highlight search terms
+        function highlightSearchTerm(text, searchTerm) {
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function selectSearchResult(jobTitle, jobId, isWomen) {
+            document.getElementById('searchInput').value = jobTitle;
+            document.getElementById('searchResults').classList.add('hidden');
+            
+            // Show job details
+            showJobDetails(jobId, isWomen);
+        }
+
+        function performAdvancedSearch() {
+            const searchTerm = document.getElementById('searchInput').value;
+            const city = document.getElementById('cityFilter').value;
+            const category = document.getElementById('categoryFilter').value;
+            
+            // Update current filters
+            currentFilters.search = searchTerm;
+            currentFilters.city = city;
+            currentFilters.category = category;
+            
+            showLoadingModal();
+            
+            setTimeout(() => {
+                hideLoadingModal();
+                displayJobs();
+                displayWomenJobs();
+                
+                let message = '🔍 تم تحديث نتائج البحث!';
+                if (searchTerm || city || category) {
+                    message = `تم العثور على وظائف مطابقة لمعايير البحث`;
+                }
+                showNotification(message);
+                document.getElementById('jobs').scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
+        }
+
+        // Filter functions
+        function filterJobs() {
+            const city = document.getElementById('cityFilter').value;
+            const category = document.getElementById('categoryFilter').value;
+            
+            currentFilters.city = city;
+            currentFilters.category = category;
+            
+            displayJobs();
+            displayWomenJobs();
+            
+            let filterMessage = 'تم تطبيق الفلاتر! ✅';
+            if (city && category) {
+                filterMessage = `تم الفلترة حسب المدينة والتخصص`;
+            } else if (city) {
+                filterMessage = `تم الفلترة حسب المدينة: ${getArabicCityName(city)}`;
+            } else if (category) {
+                filterMessage = `تم الفلترة حسب التخصص: ${getArabicCategoryName(category)}`;
+            }
+            
+            showNotification(filterMessage);
+        }
+
+        function getArabicCityName(cityCode) {
+            const cities = {
+                'riyadh': 'الرياض',
+                'jeddah': 'جدة',
+                'dammam': 'الدمام',
+                'mecca': 'مكة المكرمة',
+                'medina': 'المدينة المنورة'
+            };
+            return cities[cityCode] || cityCode;
+        }
+
+        function getArabicCategoryName(categoryCode) {
+            const categories = {
+                'security': 'الأمن والحراسة',
+                'banks': 'البنوك والمالية',
+                'health': 'الصحة والطب',
+                'education': 'التعليم',
+                'technology': 'التقنية والبرمجة'
+            };
+            return categories[categoryCode] || categoryCode;
+        }
+
+        function filterByCategory(category) {
+            document.getElementById('categoryFilter').value = category;
+            filterJobs();
+            
+            // Show appropriate section based on category
+            if (category === 'women') {
+                document.getElementById('women-jobs').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                document.getElementById('jobs').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Quick filter functions
+        function quickFilter(type) {
+            let jobs = [];
+            let message = '';
+            
+            switch(type) {
+                case 'urgent':
+                    jobs = [...jobsData.men, ...jobsData.women].filter(job => job.urgent);
+                    message = `🚨 تم العثور على ${jobs.length} وظيفة عاجلة!`;
+                    break;
+                case 'remote':
+                    jobs = [...jobsData.men, ...jobsData.women].filter(job => job.remote);
+                    message = `🏠 تم العثور على ${jobs.length} وظيفة عن بُعد!`;
+                    break;
+                case 'high-salary':
+                    jobs = [...jobsData.men, ...jobsData.women].filter(job => {
+                        const maxSalary = parseInt(job.salaryRange.split('-')[1]);
+                        return maxSalary >= 8000;
+                    });
+                    message = `💰 تم العثور على ${jobs.length} وظيفة براتب عالي!`;
+                    break;
+                case 'women':
+                    jobs = jobsData.women;
+                    message = `👩 تم العثور على ${jobs.length} وظيفة نسائية!`;
+                    break;
+                case 'new':
+                    jobs = [...jobsData.men, ...jobsData.women].filter(job => !job.urgent && !job.featured && !job.popular && !job.remote);
+                    message = `✨ تم العثور على ${jobs.length} وظيفة جديدة!`;
+                    break;
+            }
+            
+            showNotification(message);
+            
+            if (type === 'women') {
+                document.getElementById('women-jobs').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                document.getElementById('jobs').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Load more jobs
+        function loadMoreJobs() {
+            const increment = 8;
+            displayedJobsCount += increment;
+            
+            if (displayedJobsCount > jobsData.men.length) {
+                displayedJobsCount = jobsData.men.length;
+                showNotification('📋 تم عرض جميع الوظائف المتاحة للرجال!');
+            } else {
+                showNotification(`📈 تم تحميل ${increment} وظائف إضافية!`);
+            }
+            
+            displayJobs();
+        }
+
+        function loadMoreWomenJobs() {
+            const increment = 8;
+            displayedWomenJobsCount += increment;
+            
+            if (displayedWomenJobsCount > jobsData.women.length) {
+                displayedWomenJobsCount = jobsData.women.length;
+                showNotification('💖 تم عرض جميع الوظائف النسائية المتاحة!');
+            } else {
+                showNotification(`🌸 تم تحميل ${increment} وظائف نسائية إضافية!`);
+            }
+            
+            displayWomenJobs();
+        }
+
+        // Show job details modal
+        function showJobDetails(jobId, isWomen = false) {
+            const job = isWomen ? 
+                jobsData.women.find(j => j.id === jobId) : 
+                jobsData.men.find(j => j.id === jobId);
+            
+            if (!job) return;
+
+            document.getElementById('jobDetailTitle').textContent = job.title;
+            document.getElementById('jobDetailContent').innerHTML = `
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-info-circle ml-2"></i>📋 معلومات الوظيفة
+                            </h4>
+                            <div class="space-y-3 text-sm bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                                <div class="flex items-center"><i class="fas fa-building ml-2 text-blue-500"></i><strong>الشركة:</strong> <span class="mr-2">${job.company}</span></div>
+                                <div class="flex items-center"><i class="fas fa-map-marker-alt ml-2 text-red-500"></i><strong>المدينة:</strong> <span class="mr-2">${job.cityName}</span></div>
+                                <div class="flex items-center"><i class="fas fa-money-bill-wave ml-2 text-green-500"></i><strong>الراتب:</strong> <span class="mr-2">${job.salary}</span></div>
+                                <div class="flex items-center"><i class="fas fa-clock ml-2 text-blue-500"></i><strong>ساعات العمل:</strong> <span class="mr-2">${job.hours}</span></div>
+                                <div class="flex items-center"><i class="fas fa-calendar ml-2 text-purple-500"></i><strong>الإجازة:</strong> <span class="mr-2">${job.holiday}</span></div>
+                                <div class="flex items-center"><i class="fas fa-users ml-2 text-pink-500"></i><strong>الجنس:</strong> <span class="mr-2">${job.gender}</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br ${job.gradient} p-6 rounded-xl text-white text-center">
+                            <div class="text-6xl mb-4">${job.icon}</div>
+                            <h5 class="font-bold text-lg">${job.title}</h5>
+                            <p class="text-sm mt-2 opacity-90">${job.company}</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-gray-800 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-file-alt ml-2"></i>📝 وصف الوظيفة
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">${job.description}</p>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-3 flex items-center">
+                            <i class="fas fa-list-check ml-2"></i>📋 المتطلبات والشروط
+                        </h4>
+                        <ul class="space-y-3">
+                            ${job.requirements.map(req => `<li class="flex items-start"><i class="fas fa-check text-blue-500 ml-2 mt-1 min-w-[1rem]"></i><span>${req}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="job-benefits">
+                        <h4 class="font-bold text-green-700 dark:text-green-300 mb-3 flex items-center">
+                            <i class="fas fa-gift ml-2"></i>🎁 المزايا والفوائد
+                        </h4>
+                        <ul class="space-y-3">
+                            ${job.benefits.map(benefit => `<li class="flex items-start"><i class="fas fa-star text-green-500 ml-2 mt-1 min-w-[1rem]"></i><span>${benefit}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg">
+                        <h5 class="font-bold text-yellow-700 dark:text-yellow-300 mb-3 flex items-center">
+                            <i class="fas fa-lightbulb ml-2"></i>💡 نصائح للتقديم الناجح
+                        </h5>
+                        <ul class="text-sm text-yellow-600 dark:text-yellow-300 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>اقرأ متطلبات الوظيفة بعناية</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>تأكد من صحة جميع معلوماتك</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>اذكر مهاراتك وخبراتك بوضوح</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>كن جاهزاً للمقابلة الشخصية</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200 dark:border-gray-600">
+                        <button onclick="applyForJob('${job.title}'); closeJobDetailModal();" class="flex-1 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-bold btn-hover-effect">
+                            <i class="fas fa-paper-plane ml-2"></i>تقدم للوظيفة الآن
+                        </button>
+                        <a href="https://wa.me/+966590417009?text=${encodeURIComponent(job.whatsappMessage + ' - أريد المزيد من التفاصيل')}" target="_blank" class="flex-1 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 font-bold text-center btn-hover-effect">
+                            <i class="fab fa-whatsapp ml-2"></i>تواصل عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('jobDetailModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close job detail modal
+        function closeJobDetailModal() {
+            document.getElementById('jobDetailModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Application Modal Functions
+        function showApplicationModal() {
+            document.getElementById('applicationModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeApplicationModal() {
+            document.getElementById('applicationModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function applyForJob(jobTitle) {
+            showApplicationModal();
+            const jobPositionSelect = document.getElementById('jobPosition');
+            
+            // Try to match the job title with an option
+            const options = jobPositionSelect.options;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].text.includes(jobTitle.split(' - ')[0]) || jobTitle.includes(options[i].text)) {
+                    jobPositionSelect.value = options[i].value;
+                    break;
+                }
+            }
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Loading Modal Functions
+        function showLoadingModal() {
+            document.getElementById('loadingModal').classList.remove('hidden');
+        }
+
+        function hideLoadingModal() {
+            document.getElementById('loadingModal').classList.add('hidden');
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Enhanced Form Submission with FormSubmit
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>جاري الإرسال...';
+            submitButton.disabled = true;
+            
+            // Add timestamp and metadata
+            const now = new Date();
+            const timestampField = document.createElement('input');
+            timestampField.type = 'hidden';
+            timestampField.name = 'تاريخ_التقديم';
+            timestampField.value = now.toLocaleString('ar-SA');
+            this.appendChild(timestampField);
+            
+            const requestIdField = document.createElement('input');
+            requestIdField.type = 'hidden';
+            requestIdField.name = 'رقم_الطلب';
+            requestIdField.value = 'JOB-' + Date.now();
+            this.appendChild(requestIdField);
+            
+            const sourceField = document.createElement('input');
+            sourceField.type = 'hidden';
+            sourceField.name = 'المصدر';
+            sourceField.value = 'منصة فرص العمل الذهبية';
+            this.appendChild(sourceField);
+            
+            // Show success message immediately
+            setTimeout(() => {
+                closeApplicationModal();
+                setTimeout(() => {
+                    document.getElementById('successModal').classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }, 500);
+                showNotification('🎉 تم إرسال طلبك بنجاح! سنتواصل معك خلال 24 ساعة');
+            }, 1000);
+            
+            // Let the form submit naturally to FormSubmit (don't prevent default)
+        });
+
+        // Enhanced notification system
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type === 'error' ? 'error' : ''}`;
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'} ml-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 4000);
+        }
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-count'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            counter.textContent = Math.floor(current).toLocaleString();
+                        }, 16);
+                        
+                        observer.unobserve(counter);
+                    }
+                });
+            });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Scroll indicator
+        function updateScrollIndicator() {
+            const indicator = document.getElementById('scrollIndicator');
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollProgress = (scrollTop / scrollHeight) * 100;
+                
+                indicator.style.transform = `scaleX(${scrollProgress / 100})`;
+            });
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#searchInput') && !e.target.closest('#searchResults')) {
+                document.getElementById('searchResults').classList.add('hidden');
+            }
+            
+            // Close mobile menu when clicking outside
+            if (!e.target.closest('#mobileMenu') && !e.target.closest('[onclick="toggleMobileMenu()"]')) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+
+</body></html>
