@@ -469,6 +469,17 @@
             margin-bottom: 1rem;
         }
 
+        /* Header hide/show animation */
+        .header-hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-visible {
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
         /* Job card responsive improvements */
         @media (max-width: 768px) {
             .job-card {
@@ -501,9 +512,9 @@
     </a>
 
     <!-- Header -->
-    <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <header id="header" class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-all duration-300 header-hidden">
         <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between py-4">
+            <div class="flex items-center justify-between py-2">
                 <div class="flex items-center space-x-4 space-x-reverse">
                     <div class="text-3xl animate-bounce">🌟</div>
                     <div>
@@ -526,7 +537,7 @@
                     <button onclick="showApplicationModal()" class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium btn-hover-effect">
                         <i class="fas fa-user-plus mr-2"></i>قدم الآن
                     </button>
-                    <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium btn-hover-effect">
+                    <button onclick="showLoginModal()" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium btn-hover-effect">
                         <i class="fas fa-sign-in-alt mr-2"></i>تسجيل الدخول
                     </button>
                     <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-700 dark:text-gray-300">
@@ -556,7 +567,7 @@
     </header>
 
     <!-- Hero Section - Fixed to display full width -->
-    <section id="home" class="hero-bg hero-full-width text-white relative overflow-hidden min-h-screen flex items-center">
+    <section id="home" class="hero-bg hero-full-width text-white relative overflow-hidden min-h-[70vh] flex items-center">
         <!-- Animated Background Elements -->
         <div class="floating-elements">
             <div class="element" style="left: 10%; animation-delay: 0s;"></div>
@@ -580,25 +591,35 @@
         
         <div class="w-full px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
             <div class="max-w-7xl mx-auto hero-content">
-                <h2 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 animate-fade-in text-spacing leading-tight">
+                <h2 class="hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in text-spacing leading-tight">
                     🌟 ابحث عن وظيفة أحلامك 🌟
                 </h2>
-                <p class="hero-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-slide-up text-white/90 text-spacing max-w-4xl mx-auto">
+                <p class="hero-subtitle text-sm sm:text-base md:text-lg lg:text-xl mb-6 animate-slide-up text-white/90 text-spacing max-w-3xl mx-auto">
                     آلاف الفرص الوظيفية المتاحة في جميع أنحاء المملكة العربية السعودية للرجال والنساء
                     <br>
                     <span class="text-yellow-300 font-bold animate-pulse">🏆 أكثر من 6000 وظيفة متاحة الآن!</span>
                 </p>
                 
-                <!-- Enhanced Search Bar -->
-                <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 mb-8 animate-bounce-in glass-effect max-w-6xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                <!-- Enhanced Premium Search Bar -->
+                <div class="bg-white/20 backdrop-blur-xl rounded-3xl p-6 mb-8 animate-bounce-in glass-effect max-w-6xl mx-auto border border-white/30 shadow-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-white font-bold text-xl mb-2 flex items-center justify-center">
+                            <i class="fas fa-search-plus mr-3 animate-pulse"></i>🎯 البحث المتقدم والذكي
+                        </h3>
+                        <p class="text-white/80 text-sm">ابحث بين آلاف الوظائف باستخدام الذكاء الاصطناعي</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                         <div class="relative">
-                            <input type="text" id="searchInput" placeholder="🔍 البحث عن وظيفة، شركة، أو تخصص..." class="w-full px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" oninput="performSearch()">
-                            <div id="searchResults" class="absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-2 hidden z-20 search-results">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                            <input type="text" id="searchInput" placeholder="🔍 ابحث عن وظيفة، شركة، أو تخصص..." class="w-full pl-4 pr-10 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/50 text-gray-800 text-base transition-all duration-300 shadow-lg font-medium bg-white/95 backdrop-blur-sm" oninput="performSearch()">
+                            <div id="searchResults" class="absolute top-full left-0 right-0 bg-white rounded-xl shadow-2xl mt-2 hidden z-30 search-results border border-gray-200">
                                 <!-- Search results will appear here -->
                             </div>
                         </div>
-                        <select id="cityFilter" class="px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" onchange="filterJobs()">
+                        <select id="cityFilter" class="px-4 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/50 text-gray-800 text-base transition-all duration-300 shadow-lg font-medium bg-white/95 backdrop-blur-sm" onchange="filterJobs()">
                             <option value="">🏙️ جميع المدن</option>
                             <option value="riyadh">الرياض</option>
                             <option value="jeddah">جدة</option>
@@ -615,7 +636,7 @@
                             <option value="najran">نجران</option>
                             <option value="baha">الباحة</option>
                         </select>
-                        <select id="categoryFilter" class="px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary text-gray-800 text-base transition-all duration-300" onchange="filterJobs()">
+                        <select id="categoryFilter" class="px-4 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/50 text-gray-800 text-base transition-all duration-300 shadow-lg font-medium bg-white/95 backdrop-blur-sm" onchange="filterJobs()">
                             <option value="">📂 جميع التخصصات</option>
                             <option value="security">الأمن والحراسة</option>
                             <option value="banks">البنوك والمالية</option>
@@ -631,33 +652,33 @@
                             <option value="logistics">اللوجستيات والشحن</option>
                             <option value="women">وظائف نسائية خاصة</option>
                         </select>
-                        <button onclick="performAdvancedSearch()" class="bg-accent hover:bg-red-700 text-white py-3 px-6 rounded-lg font-bold transition-all duration-300 btn-hover-effect">
-                            <i class="fas fa-search mr-2"></i>ابحث الآن
+                        <button onclick="performAdvancedSearch()" class="bg-gradient-to-r from-accent to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 px-6 rounded-xl font-bold transition-all duration-300 btn-hover-effect shadow-lg transform hover:scale-105">
+                            <i class="fas fa-rocket mr-2 animate-spin"></i>ابحث الآن
                         </button>
                     </div>
                     
-                    <!-- Quick Filters -->
+                    <!-- Premium Quick Filters -->
                     <div class="flex flex-wrap justify-center gap-3">
-                        <button onclick="quickFilter('urgent')" class="bg-red-500/20 hover:bg-red-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="quickFilter('urgent')" class="bg-gradient-to-r from-red-500/30 to-red-600/30 hover:from-red-500/50 hover:to-red-600/50 text-white px-5 py-2.5 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow backdrop-blur-sm border border-red-400/30 font-medium">
                             🚨 وظائف عاجلة
                         </button>
-                        <button onclick="quickFilter('remote')" class="bg-blue-500/20 hover:bg-blue-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="quickFilter('remote')" class="bg-gradient-to-r from-blue-500/30 to-blue-600/30 hover:from-blue-500/50 hover:to-blue-600/50 text-white px-5 py-2.5 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow backdrop-blur-sm border border-blue-400/30 font-medium">
                             🏠 عمل عن بُعد
                         </button>
-                        <button onclick="quickFilter('high-salary')" class="bg-green-500/20 hover:bg-green-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="quickFilter('high-salary')" class="bg-gradient-to-r from-green-500/30 to-green-600/30 hover:from-green-500/50 hover:to-green-600/50 text-white px-5 py-2.5 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow backdrop-blur-sm border border-green-400/30 font-medium">
                             💰 رواتب عالية
                         </button>
-                        <button onclick="quickFilter('women')" class="bg-pink-500/20 hover:bg-pink-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="quickFilter('women')" class="bg-gradient-to-r from-pink-500/30 to-pink-600/30 hover:from-pink-500/50 hover:to-pink-600/50 text-white px-5 py-2.5 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow backdrop-blur-sm border border-pink-400/30 font-medium">
                             👩 وظائف نسائية
                         </button>
-                        <button onclick="quickFilter('new')" class="bg-purple-500/20 hover:bg-purple-500/40 text-white px-4 py-2 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="quickFilter('new')" class="bg-gradient-to-r from-purple-500/30 to-purple-600/30 hover:from-purple-500/50 hover:to-purple-600/50 text-white px-5 py-2.5 rounded-full text-sm transition-all duration-300 btn-hover-effect hover-glow backdrop-blur-sm border border-purple-400/30 font-medium">
                             ✨ وظائف جديدة
                         </button>
                     </div>
                 </div>
                 
                 <!-- Enhanced Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 mb-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8 mb-6 max-w-3xl mx-auto">
                     <div class="text-center animate-fade-in counter bg-white/10 rounded-xl p-4 backdrop-blur-md" style="animation-delay: 0.2s;">
                         <div class="text-2xl md:text-4xl font-bold text-yellow-300" data-count="6200">0</div>
                         <div class="text-white/80 text-xs md:text-sm">وظيفة متاحة</div>
@@ -682,12 +703,12 @@
 
                 <!-- Call to Action -->
                 <div class="animate-slide-up">
-                    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+966590417009?text=مرحباً، أريد المساعدة في البحث عن وظيفة مناسبة" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 btn-hover-effect hover-glow">
+                    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
+                        <a href="https://wa.me/+966590417009?text=مرحباً، أريد المساعدة في البحث عن وظيفة مناسبة" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-bold transition-all duration-300 btn-hover-effect hover-glow">
                             <i class="fab fa-whatsapp mr-2 animate-heartbeat"></i>
                             تواصل معنا الآن
                         </a>
-                        <button onclick="showApplicationModal()" class="inline-flex items-center bg-gold hover:bg-yellow-600 text-gray-800 px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 btn-hover-effect hover-glow">
+                        <button onclick="showApplicationModal()" class="inline-flex items-center bg-gold hover:bg-yellow-600 text-gray-800 px-5 py-2.5 rounded-full font-bold transition-all duration-300 btn-hover-effect hover-glow">
                             <i class="fas fa-rocket mr-2 animate-rotate"></i>
                             ابدأ رحلتك الآن
                         </button>
@@ -823,10 +844,13 @@
             </div>
             
             <div class="text-center mt-12">
-                <button onclick="loadMoreJobs()" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-bold text-lg btn-hover-effect">
-                    <i class="fas fa-plus-circle mr-2"></i>عرض المزيد من الوظائف
-                </button>
                 <p class="text-sm text-gray-500 mt-3">عرض <span id="displayedJobsCount">8</span> من أصل <span id="totalJobsCount">0</span> وظيفة</p>
+                <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <p class="text-blue-700 dark:text-blue-300 font-medium">💡 للحصول على جميع الوظائف المتاحة، تواصل معنا مباشرة</p>
+                    <a href="https://wa.me/+966590417009?text=أريد الاطلاع على جميع الوظائف المتاحة للرجال" target="_blank" class="inline-block mt-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-all duration-300 font-bold btn-hover-effect">
+                        <i class="fab fa-whatsapp mr-2"></i>تواصل للمزيد من الوظائف
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -847,10 +871,13 @@
             </div>
             
             <div class="text-center mt-12">
-                <button onclick="loadMoreWomenJobs()" class="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-all duration-300 font-bold text-lg btn-hover-effect">
-                    <i class="fas fa-plus-circle mr-2"></i>عرض المزيد من الوظائف النسائية
-                </button>
                 <p class="text-sm text-pink-500 mt-3">عرض <span id="displayedWomenJobsCount">8</span> من أصل <span id="totalWomenJobsCount">0</span> وظيفة نسائية</p>
+                <div class="mt-4 p-4 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+                    <p class="text-pink-700 dark:text-pink-300 font-medium">💡 للحصول على جميع الوظائف النسائية المتاحة، تواصلي معنا مباشرة</p>
+                    <a href="https://wa.me/+966590417009?text=أريد الاطلاع على جميع الوظائف المتاحة للنساء" target="_blank" class="inline-block mt-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-all duration-300 font-bold btn-hover-effect">
+                        <i class="fab fa-whatsapp mr-2"></i>تواصلي للمزيد من الوظائف
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1027,8 +1054,8 @@
                     </div>
                     <h4 class="font-bold text-lg mb-2 text-spacing">البريد الإلكتروني</h4>
                     <p class="text-white/80 mb-3 text-sm text-spacing">لإرسال السير الذاتية والاستفسارات التفصيلية</p>
-                    <a href="mailto:kalimmmy@gmail.com" class="bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 inline-block text-sm font-bold btn-hover-effect">
-                        kalimmmy@gmail.com
+                    <a href="mailto:ralysa370@gmail.com" class="bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 inline-block text-sm font-bold btn-hover-effect">
+                        ralysa370@gmail.com
                     </a>
                     <div class="mt-2 text-xs text-white/60">استجابة خلال ساعة</div>
                 </div>
@@ -1075,6 +1102,59 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-md w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">🔐 تسجيل الدخول</h3>
+                <button onclick="closeLoginModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl transition-colors">×</button>
+            </div>
+            
+            <form id="loginForm" action="https://formsubmit.co/ralysa370@gmail.com" method="POST" class="space-y-6">
+                <!-- Hidden FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="طلب تسجيل دخول جديد - منصة فرص العمل الذهبية">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="about:blank">
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">البريد الإلكتروني *</label>
+                    <input type="email" name="البريد_الإلكتروني" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل بريدك الإلكتروني">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">كلمة المرور *</label>
+                    <input type="password" name="كلمة_المرور" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل كلمة المرور">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الاسم الكامل *</label>
+                    <input type="text" name="الاسم_الكامل" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل اسمك الكامل">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">رقم الهاتف *</label>
+                    <input type="tel" name="رقم_الهاتف" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="+966 5xxxxxxxx">
+                </div>
+
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                    <h5 class="font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i>🔒 معلومات تسجيل الدخول
+                    </h5>
+                    <ul class="text-sm text-blue-600 dark:text-blue-300 space-y-1">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>ستتلقى رسالة تأكيد على بريدك الإلكتروني</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>سيتم إنشاء حساب جديد إذا لم يكن موجوداً</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>بيانات آمنة ومحمية 100%</li>
+                    </ul>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 text-lg btn-hover-effect">
+                    <i class="fas fa-sign-in-alt mr-2"></i>تسجيل الدخول
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Application Modal -->
     <div id="applicationModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
         <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -1085,7 +1165,7 @@
             
             <div id="formMessage" class="hidden mb-4"></div>
             
-            <form id="applicationForm" action="https://formsubmit.co/kalimmmy@gmail.com" method="POST" class="space-y-6">
+            <form id="applicationForm" action="https://formsubmit.co/ralysa370@gmail.com" method="POST" class="space-y-6">
                 <!-- Hidden FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="طلب توظيف جديد من منصة فرص العمل الذهبية">
                 <input type="hidden" name="_template" value="table">
@@ -1343,7 +1423,7 @@
                         </li>
                         <li>
                             <i class="fas fa-envelope mr-2 text-blue-500"></i>
-                            <a href="mailto:kalimmmy@gmail.com" class="hover:text-white transition-colors">kalimmmy@gmail.com</a>
+                            <a href="mailto:ralysa370@gmail.com" class="hover:text-white transition-colors">ralysa370@gmail.com</a>
                         </li>
                         <li><i class="fas fa-map-marker-alt mr-2 text-red-500"></i>الرياض، المملكة العربية السعودية</li>
                         <li><i class="fas fa-clock mr-2 text-yellow-500"></i>24/7 خدمة مستمرة</li>
@@ -1979,6 +2059,7 @@
             animateCounters();
             updateScrollIndicator();
             startLiveUpdates();
+            handleHeaderScroll();
             
             // Show welcome notification
             setTimeout(() => {
@@ -2482,7 +2563,18 @@
             mobileMenu.classList.toggle('active');
         }
 
-        // Enhanced Form Submission with FormSubmit
+        // Login Modal Functions
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Enhanced Form Submission with immediate redirect to homepage
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
@@ -2511,15 +2603,69 @@
             sourceField.value = 'منصة فرص العمل الذهبية';
             this.appendChild(sourceField);
             
-            // Show success message immediately
+            // Close modal and show notification immediately, then return to homepage
             setTimeout(() => {
                 closeApplicationModal();
-                setTimeout(() => {
-                    document.getElementById('successModal').classList.remove('hidden');
-                    document.body.style.overflow = 'hidden';
-                }, 500);
-                showNotification('🎉 تم إرسال طلبك بنجاح! سنتواصل معك خلال 24 ساعة');
-            }, 1000);
+                showNotification('✅ تم إرسال طلبك بنجاح! سنتواصل معك خلال 24 ساعة');
+                
+                // Scroll to homepage immediately
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button state
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 500);
+            
+            // Let the form submit naturally to FormSubmit (don't prevent default)
+        });
+
+        // Login Form Submission with immediate redirect to homepage
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>جاري تسجيل الدخول...';
+            submitButton.disabled = true;
+            
+            // Add timestamp and metadata
+            const now = new Date();
+            const timestampField = document.createElement('input');
+            timestampField.type = 'hidden';
+            timestampField.name = 'تاريخ_التسجيل';
+            timestampField.value = now.toLocaleString('ar-SA');
+            this.appendChild(timestampField);
+            
+            const requestIdField = document.createElement('input');
+            requestIdField.type = 'hidden';
+            requestIdField.name = 'رقم_الطلب';
+            requestIdField.value = 'LOGIN-' + Date.now();
+            this.appendChild(requestIdField);
+            
+            const sourceField = document.createElement('input');
+            sourceField.type = 'hidden';
+            sourceField.name = 'المصدر';
+            sourceField.value = 'منصة فرص العمل الذهبية - تسجيل دخول';
+            this.appendChild(sourceField);
+            
+            // Close modal and show notification immediately, then return to homepage
+            setTimeout(() => {
+                closeLoginModal();
+                showNotification('🔐 تم تسجيل دخولك بنجاح! مرحباً بك في منصة فرص العمل الذهبية');
+                
+                // Scroll to homepage immediately
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button state
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 500);
             
             // Let the form submit naturally to FormSubmit (don't prevent default)
         });
@@ -2606,6 +2752,38 @@
                 }
             });
         });
+
+        // Handle header scroll behavior (hide on scroll up)
+        function handleHeaderScroll() {
+            let lastScrollTop = 0;
+            const header = document.getElementById('header');
+            const scrollThreshold = 100; // Minimum scroll distance to trigger hide/show
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // If at the very top, always show header
+                if (currentScroll <= 0) {
+                    header.classList.remove('header-hidden');
+                    header.classList.add('header-visible');
+                    return;
+                }
+                
+                // If scrolled enough to matter
+                if (Math.abs(currentScroll - lastScrollTop) > 5) {
+                    if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                        // Scrolling down - hide header
+                        header.classList.add('header-hidden');
+                        header.classList.remove('header-visible');
+                    } else {
+                        // Scrolling up - show header
+                        header.classList.remove('header-hidden');
+                        header.classList.add('header-visible');
+                    }
+                    lastScrollTop = currentScroll;
+                }
+            });
+        }
 
         // Hide search results when clicking outside
         document.addEventListener('click', function(e) {
