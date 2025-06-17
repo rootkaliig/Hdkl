@@ -512,7 +512,7 @@
     </a>
 
     <!-- Header -->
-    <header id="header" class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-all duration-300 header-hidden">
+    <header id="header" class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-all duration-300 header-visible">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-2">
                 <div class="flex items-center space-x-4 space-x-reverse">
@@ -537,9 +537,9 @@
                     <button onclick="showApplicationModal()" class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium btn-hover-effect">
                         <i class="fas fa-user-plus mr-2"></i>قدم الآن
                     </button>
-                    <button onclick="showLoginModal()" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium btn-hover-effect">
-                        <i class="fas fa-sign-in-alt mr-2"></i>تسجيل الدخول
-                    </button>
+                    <a href="https://wa.me/+966590417009?text=مرحباً، أريد التواصل مع منصة فرص العمل الذهبية" target="_blank" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium btn-hover-effect inline-flex items-center">
+                        <i class="fas fa-phone mr-2"></i>اتصل الآن
+                    </a>
                     <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-700 dark:text-gray-300">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -1102,58 +1102,7 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 m-4 max-w-md w-full">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-800 dark:text-white">🔐 تسجيل الدخول</h3>
-                <button onclick="closeLoginModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl transition-colors">×</button>
-            </div>
-            
-            <form id="loginForm" action="https://formsubmit.co/ralysa370@gmail.com" method="POST" class="space-y-6">
-                <!-- Hidden FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="طلب تسجيل دخول جديد - منصة فرص العمل الذهبية">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="about:blank">
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">البريد الإلكتروني *</label>
-                    <input type="email" name="البريد_الإلكتروني" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل بريدك الإلكتروني">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">كلمة المرور *</label>
-                    <input type="password" name="كلمة_المرور" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل كلمة المرور">
-                </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">الاسم الكامل *</label>
-                    <input type="text" name="الاسم_الكامل" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="أدخل اسمك الكامل">
-                </div>
-
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">رقم الهاتف *</label>
-                    <input type="tel" name="رقم_الهاتف" required="" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white text-base transition-all duration-300" placeholder="+966 5xxxxxxxx">
-                </div>
-
-                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-                    <h5 class="font-bold text-blue-700 dark:text-blue-300 mb-2 flex items-center">
-                        <i class="fas fa-info-circle mr-2"></i>🔒 معلومات تسجيل الدخول
-                    </h5>
-                    <ul class="text-sm text-blue-600 dark:text-blue-300 space-y-1">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>ستتلقى رسالة تأكيد على بريدك الإلكتروني</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>سيتم إنشاء حساب جديد إذا لم يكن موجوداً</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>بيانات آمنة ومحمية 100%</li>
-                    </ul>
-                </div>
-                
-                <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 text-lg btn-hover-effect">
-                    <i class="fas fa-sign-in-alt mr-2"></i>تسجيل الدخول
-                </button>
-            </form>
-        </div>
-    </div>
 
     <!-- Application Modal -->
     <div id="applicationModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
@@ -1170,7 +1119,7 @@
                 <input type="hidden" name="_subject" value="طلب توظيف جديد من منصة فرص العمل الذهبية">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="about:blank">
+                <input type="hidden" name="_next" value="https://wa.me/+966590417009?text=تم إرسال طلب التوظيف بنجاح، أتطلع لسماع المزيد من التفاصيل">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -2563,16 +2512,7 @@
             mobileMenu.classList.toggle('active');
         }
 
-        // Login Modal Functions
-        function showLoginModal() {
-            document.getElementById('loginModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
 
-        function closeLoginModal() {
-            document.getElementById('loginModal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
 
         // Enhanced Form Submission with immediate redirect to homepage
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
@@ -2622,53 +2562,7 @@
             // Let the form submit naturally to FormSubmit (don't prevent default)
         });
 
-        // Login Form Submission with immediate redirect to homepage
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            
-            // Show loading state
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>جاري تسجيل الدخول...';
-            submitButton.disabled = true;
-            
-            // Add timestamp and metadata
-            const now = new Date();
-            const timestampField = document.createElement('input');
-            timestampField.type = 'hidden';
-            timestampField.name = 'تاريخ_التسجيل';
-            timestampField.value = now.toLocaleString('ar-SA');
-            this.appendChild(timestampField);
-            
-            const requestIdField = document.createElement('input');
-            requestIdField.type = 'hidden';
-            requestIdField.name = 'رقم_الطلب';
-            requestIdField.value = 'LOGIN-' + Date.now();
-            this.appendChild(requestIdField);
-            
-            const sourceField = document.createElement('input');
-            sourceField.type = 'hidden';
-            sourceField.name = 'المصدر';
-            sourceField.value = 'منصة فرص العمل الذهبية - تسجيل دخول';
-            this.appendChild(sourceField);
-            
-            // Close modal and show notification immediately, then return to homepage
-            setTimeout(() => {
-                closeLoginModal();
-                showNotification('🔐 تم تسجيل دخولك بنجاح! مرحباً بك في منصة فرص العمل الذهبية');
-                
-                // Scroll to homepage immediately
-                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-                
-                // Reset form
-                this.reset();
-                
-                // Reset button state
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-            }, 500);
-            
-            // Let the form submit naturally to FormSubmit (don't prevent default)
-        });
+
 
         // Enhanced notification system
         function showNotification(message, type = 'success') {
